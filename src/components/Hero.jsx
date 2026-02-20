@@ -16,7 +16,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen pt-12 md:pt-0 bg-black text-white flex items-center overflow-hidden">
+    <section
+      id="Beranda"
+      className="relative min-h-screen pt-12 md:pt-0 bg-black text-white flex items-center overflow-hidden"
+    >
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-red-500/20 rounded-full blur-[160px]" />
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-red-600/20 rounded-full blur-[160px]" />

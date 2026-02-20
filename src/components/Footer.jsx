@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Footer() {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer className="relative bg-black text-white border-t border-white/10 py-16 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -34,27 +40,36 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="#" className="hover:text-red-400 transition">
+                <button
+                  onClick={() => scrollToSection("Beranda")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
                   Beranda
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#About" className="hover:text-red-400 transition">
+                <button
+                  onClick={() => scrollToSection("About")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
                   About
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="#Projects"
-                  className="hover:text-red-400 transition"
+                <button
+                  onClick={() => scrollToSection("Projects")}
+                  className="hover:text-red-400 transition cursor-pointer"
                 >
                   Projects
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#Contact" className="hover:text-red-400 transition">
+                <button
+                  onClick={() => scrollToSection("Contact")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

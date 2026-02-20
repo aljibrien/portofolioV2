@@ -3,10 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="fixed top-4 left-0 w-full z-50 px-6">
@@ -22,24 +28,36 @@ export default function Navbar() {
 
         <ul className="hidden md:flex gap-8 text-sm">
           <li>
-            <Link href="#" className="hover:text-red-400 transition">
+            <button
+              onClick={() => scrollToSection("Beranda")}
+              className="hover:text-red-400 transition cursor-pointer"
+            >
               Beranda
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#About" className="hover:text-red-400 transition">
+            <button
+              onClick={() => scrollToSection("About")}
+              className="hover:text-red-400 transition cursor-pointer"
+            >
               About
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#Projects" className="hover:text-red-400 transition">
+            <button
+              onClick={() => scrollToSection("Projects")}
+              className="hover:text-red-400 transition cursor-pointer"
+            >
               Projects
-            </Link>
+            </button>
           </li>
           <li>
-            <Link href="#Contact" className="hover:text-red-400 transition">
+            <button
+              onClick={() => scrollToSection("Contact")}
+              className="hover:text-red-400 transition cursor-pointer"
+            >
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
 
@@ -62,27 +80,36 @@ export default function Navbar() {
           >
             <ul className="flex flex-col gap-6 text-center text-sm">
               <li>
-                <Link href="#" className="hover:text-red-400 transition">
+                <button
+                  onClick={() => scrollToSection("Beranda")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
                   Beranda
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#About" className="hover:text-red-400 transition">
+                <button
+                  onClick={() => scrollToSection("About")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
                   About
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href="#Projects"
-                  className="hover:text-red-400 transition"
+                <button
+                  onClick={() => scrollToSection("Projects")}
+                  className="hover:text-red-400 transition cursor-pointer"
                 >
                   Projects
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#Contact" className="hover:text-red-400 transition">
+                <button
+                  onClick={() => scrollToSection("Contact")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </motion.div>

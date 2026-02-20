@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   const [stage, setStage] = useState(1);
@@ -67,11 +68,11 @@ export default function Hero() {
 
               <div className="mt-8 flex justify-center md:justify-start gap-3">
                 <button className="px-3 sm:px-4 md:px-6 py-2 text-xs sm:text-sm md:text-base bg-red-600 hover:bg-red-700 transition rounded-lg font-medium">
-                  <Link href="#projects">Lihat Project</Link>
+                  <Link href="#Projects">Lihat Project</Link>
                 </button>
 
                 <button className="px-3 sm:px-4 md:px-6 py-2 text-xs sm:text-sm md:text-base border border-gray-600 hover:border-red-500 hover:text-red-500 transition rounded-lg font-medium">
-                  <Link href="#contact">Hubungi Saya</Link>
+                  <Link href="#Contact">Hubungi Saya</Link>
                 </button>
               </div>
             </motion.div>
@@ -84,9 +85,11 @@ export default function Hero() {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full scale-110" />
-                <img
+                <Image
                   src="/foto.png"
                   alt="profile"
+                  width={400}
+                  height={400}
                   className="relative w-48 sm:w-56 md:w-64 lg:w-72 object-cover rounded-2xl shadow-2xl"
                 />
               </div>

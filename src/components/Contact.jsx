@@ -102,7 +102,7 @@ export default function Contact() {
                          transition text-white py-3 rounded-xl 
                          text-sm font-semibold"
             >
-              Send Message
+              Send Message (malas fungsikan)
             </button>
           </motion.form>
         </div>

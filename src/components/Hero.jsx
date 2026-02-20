@@ -84,7 +84,7 @@ export default function Hero() {
               initial={{ opacity: 0, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="order-1 md:order-2 lex justify-center md:justify-end"
+              className="order-1 md:order-2 flex justify-center md:justify-end"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full scale-110" />

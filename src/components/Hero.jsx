@@ -58,7 +58,7 @@ export default function Hero() {
               initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center md:text-left"
+              className="order-2 md:order-1 text-center md:text-left"
             >
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Hi, I'm <span className="text-red-500">AL</span>
@@ -84,7 +84,7 @@ export default function Hero() {
               initial={{ opacity: 0, x: 80 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="flex justify-center md:justify-end"
+              className="order-1 md:order-2 lex justify-center md:justify-end"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full scale-110" />

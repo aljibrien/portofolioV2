@@ -60,7 +60,7 @@ export default function About() {
             <div className="absolute inset-0 bg-red-600/10 blur-2xl rounded-3xl group-hover:blur-3xl transition" />
 
             <div className="relative bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-md">
-              <h3 className="text-xl font-semibold mb-6 text-white">
+              <h3 className="text-xl font-semibold mb-6 text-white text-center">
                 Skills & Stack
               </h3>
 
@@ -83,8 +83,8 @@ export default function About() {
                 <div className="bg-white/5 p-3 rounded-xl text-center">
                   Bootstrap
                 </div>
-                <div className="bg-white/5 p-3 rounded-xl text-center">
-                  Tailwind
+                <div className="bg-white/5 p-3 rounded-xl text-center col-span-2">
+                  Tailwind CSS
                 </div>
               </div>
             </div>

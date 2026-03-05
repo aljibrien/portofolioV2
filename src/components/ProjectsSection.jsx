@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ProjectCard from "@/app/projects/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
   return (
@@ -24,10 +25,6 @@ export function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold">
             Featured <span className="text-red-500">Projects</span>
           </h2>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Beberapa project terbaik yang saya bangun dengan fokus pada
-            performa, struktur, dan pengalaman pengguna. (malaska screenshot)
-          </p>
         </motion.div>
 
         <motion.div
@@ -37,21 +34,9 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
-          <ProjectCard
-            title="Warung Rara"
-            desc="Website manajemen warung modern berbasis Next.js & Supabase."
-            image="/project1.png"
-          />
-          <ProjectCard
-            title="E-Learning Platform"
-            desc="Sistem pembelajaran berbasis Laravel dan Blade."
-            image="/file.svg"
-          />
-          <ProjectCard
-            title="SIM-SARPARS"
-            desc="Sistem Manajemen Barang berbasis Codeigniter 4"
-            image="/project3.jpg"
-          />
+          {projects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
         </motion.div>
       </div>
     </section>

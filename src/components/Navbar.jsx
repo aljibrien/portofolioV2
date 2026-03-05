@@ -53,6 +53,14 @@ export default function Navbar() {
           </li>
           <li>
             <button
+              onClick={() => scrollToSection("certificates")}
+              className="hover:text-red-400 transition cursor-pointer"
+            >
+              Certificate
+            </button>
+          </li>
+          <li>
+            <button
               onClick={() => scrollToSection("Contact")}
               className="hover:text-red-400 transition cursor-pointer"
             >
@@ -101,6 +109,14 @@ export default function Navbar() {
                   className="hover:text-red-400 transition cursor-pointer"
                 >
                   Projects
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection("certificates")}
+                  className="hover:text-red-400 transition cursor-pointer"
+                >
+                  Certificate
                 </button>
               </li>
               <li>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CertificateCard from "@/app/certificate/CertificateCard";
+import CertificateCard from "@/components/CertificateCard";
 
 export default function CertificatesSection() {
   return (
@@ -26,7 +26,6 @@ export default function CertificatesSection() {
           </h2>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             Sertifikasi yang mendukung kemampuan teknis dan profesional saya
-            (kurang cik😹)
           </p>
         </motion.div>
 

@@ -1,8 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!form.name || !form.email || !form.message) {
+      alert("Semua field harus diisi.");
+      return;
+    }
+    setError("");
+
+    const text = `Halo, saya ${form.name}
+Email: ${form.email}
+
+${form.message}`;
+
+    const encoded = encodeURIComponent(text);
+
+    window.open(`https://wa.me/6289626880034?text=${encoded}`, "_blank");
+  };
+
   return (
     <section
       id="Contact"
@@ -17,12 +50,13 @@ export default function Contact() {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold">
-            Get In <span className="text-red-500">Touch</span>
+            Contact <span className="text-red-500">Me</span>
           </h2>
+
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             Punya ide, proyek, atau kolaborasi? Kirim pesan dan kita diskusi.
           </p>
@@ -33,7 +67,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true }}
             className="space-y-6"
           >
             <h3 className="text-2xl font-semibold">
@@ -52,10 +86,11 @@ export default function Contact() {
           </motion.div>
 
           <motion.form
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true }}
             className="relative bg-white/5 border border-white/10 
                        rounded-3xl p-10 backdrop-blur-md space-y-6"
           >
@@ -63,23 +98,31 @@ export default function Contact() {
 
             <div className="relative">
               <label className="block text-sm mb-2 text-gray-400">Name</label>
+
               <input
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 type="text"
                 className="w-full bg-black/50 border border-white/10 
                            rounded-xl px-4 py-3 text-sm 
-                           focus:outline-none focus:border-red-500/60 
-                           transition"
+                           focus:outline-none focus:border-red-500/60 transition"
+                required
               />
             </div>
 
             <div className="relative">
               <label className="block text-sm mb-2 text-gray-400">Email</label>
+
               <input
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 type="email"
                 className="w-full bg-black/50 border border-white/10 
                            rounded-xl px-4 py-3 text-sm 
-                           focus:outline-none focus:border-red-500/60 
-                           transition"
+                           focus:outline-none focus:border-red-500/60 transition"
+                required
               />
             </div>
 
@@ -87,22 +130,29 @@ export default function Contact() {
               <label className="block text-sm mb-2 text-gray-400">
                 Message
               </label>
+
               <textarea
+                name="message"
+                value={form.message}
+                onChange={handleChange}
                 rows="4"
                 className="w-full bg-black/50 border border-white/10 
                            rounded-xl px-4 py-3 text-sm 
-                           focus:outline-none focus:border-red-500/60 
-                           transition"
+                           focus:outline-none focus:border-red-500/60 transition"
+                required
               />
             </div>
 
+            {error && (
+              <div className="bg-red-500/10 border border-red-500/40 text-red-400 text-sm px-4 py-3 rounded-xl">
+                {error}
+              </div>
+            )}
             <button
               type="submit"
-              className="w-full bg-red-600 hover:bg-red-500 
-                         transition text-white py-3 rounded-xl 
-                         text-sm font-semibold"
+              className="w-full bg-red-600 hover:bg-red-500 transition text-white py-3 rounded-xl text-sm font-semibold"
             >
-              Send Message (malas fungsikan)
+              Send Message
             </button>
           </motion.form>
         </div>

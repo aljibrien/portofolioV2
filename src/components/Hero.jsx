@@ -64,6 +64,10 @@ export default function Hero() {
                 Hi, I'm <span className="text-red-500">AL</span>
               </h1>
 
+              <p className="text-lg md:text-xl text-gray-300 mt-2">
+                Web Developer
+              </p>
+
               <p className="mt-6 text-gray-400 text-base md:text-lg max-w-lg mx-auto md:mx-0">
                 Membangun aplikasi web yang cepat, scalable, dan clean. Fokus
                 pada struktur kode yang rapi dan solusi yang sustainable.
@@ -89,7 +93,7 @@ export default function Hero() {
               <div className="relative">
                 <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full scale-110" />
                 <Image
-                  src="/foto.png"
+                  src="/foto.webp"
                   alt="profile"
                   width={400}
                   height={400}

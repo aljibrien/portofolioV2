@@ -1,0 +1,58 @@
+export const projects = [
+  {
+    slug: "warung-rara",
+    title: "Warung Rara",
+    desc: "Website manajemen warung modern berbasis Next.js & Supabase.",
+    features: [
+      "Dashboard User",
+      "Menu Dinamis",
+      "Location",
+      "Dashboard Admin",
+      "Mengelola Menu",
+      "Cart Shopping",
+      "DLL",
+    ],
+    tech: ["Next.js", "Supabase", "Bootstrap"],
+    images: ["/projects/warung/home.png", "/projects/warung/menu.png"],
+  },
+  {
+    slug: "elearning",
+    title: "E-Learning Platform",
+    desc: "Sistem pembelajaran berbasis Laravel dan Blade.",
+    features: [
+      "Login Page",
+      "Dashboard Admin",
+      "Dashboard Guru",
+      "Dashboard Siswa",
+      "Mengelola Tugas, Nilai",
+      "Export dan Import Laporan",
+      "DLL",
+    ],
+    tech: ["Laravel", "MySQL", "Bootstrap"],
+    images: [
+      "/projects/elearning/login.png",
+      "/projects/elearning/admin.png",
+      "/projects/elearning/guru.png",
+    ],
+  },
+  {
+    slug: "sim-sarpras",
+    title: "SIM-SARPRAS",
+    desc: "Sistem Informasi Manajemen Sarana Prasarana",
+    features: [
+      "Landing Page",
+      "Login Page",
+      "Dashboard Admin",
+      "Dashboard Dosen",
+      "Role 1-4",
+      "Export Laporan",
+      "DLL",
+    ],
+    tech: ["Codeigniter 4", "MySQL", "Bootstrap"],
+    images: [
+      "/projects/simsarpras/beranda.png",
+      "/projects/simsarpras/login.png",
+      "/projects/simsarpras/admin.png",
+    ],
+  },
+];

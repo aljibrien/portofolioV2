@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
-import CertificatesSection from "../components/CertificatesSection";
+// import CertificatesSection from "../components/CertificatesSection";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <ProjectsSection />
-      <CertificatesSection />
+      {/* <CertificatesSection /> */}
       <Contact />
       <Footer />
     </>

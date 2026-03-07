@@ -47,13 +47,17 @@ export default async function ProjectDetail({ params }) {
             Project <span className="text-red-500">Preview</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide cursor-grab">
             {project.images.map((img, i) => (
               <div
                 key={i}
-                className="rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                className="min-w-[350px] md:min-w-[500px] snap-center rounded-2xl overflow-hidden border border-white/10 bg-white/5"
               >
-                <img src={img} className="w-full h-full object-contain" />
+                <img
+                  src={img}
+                  draggable="false"
+                  className="w-full h-full object-contain pointer-events-none select-none"
+                />
               </div>
             ))}
           </div>

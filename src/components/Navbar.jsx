@@ -51,14 +51,14 @@ export default function Navbar() {
               Projects
             </button>
           </li>
-          <li>
+          {/* <li>
             <button
               onClick={() => scrollToSection("certificates")}
               className="hover:text-red-400 transition cursor-pointer"
             >
               Certificate
             </button>
-          </li>
+          </li> */}
           <li>
             <button
               onClick={() => scrollToSection("Contact")}

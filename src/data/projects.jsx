@@ -13,7 +13,7 @@ export const projects = [
       "DLL",
     ],
     tech: ["Next.js", "Supabase", "Bootstrap"],
-    images: ["/projects/warung/home.png", "/projects/warung/menu.png"],
+    images: ["/projects/warung/home.webp", "/projects/warung/menu.webp"],
   },
   {
     slug: "elearning",
@@ -30,9 +30,9 @@ export const projects = [
     ],
     tech: ["Laravel", "MySQL", "Bootstrap"],
     images: [
-      "/projects/elearning/login.png",
-      "/projects/elearning/admin.png",
-      "/projects/elearning/guru.png",
+      "/projects/elearning/login.webp",
+      "/projects/elearning/admin.webp",
+      "/projects/elearning/guru.webp",
     ],
   },
   {
@@ -50,9 +50,9 @@ export const projects = [
     ],
     tech: ["Codeigniter 4", "MySQL", "Bootstrap"],
     images: [
-      "/projects/simsarpras/beranda.png",
-      "/projects/simsarpras/login.png",
-      "/projects/simsarpras/admin.png",
+      "/projects/simsarpras/beranda.webp",
+      "/projects/simsarpras/login.webp",
+      "/projects/simsarpras/admin.webp",
     ],
   },
 ];
